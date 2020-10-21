@@ -1,16 +1,19 @@
 * {
     box-sizing: border-box;
 }
+html{
+    background: url('/images/bg-mobile.png') no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     color: #fff;
-    background: url('/images/bg-mobile.png') no-repeat;
-    background-size: cover;
 }
-#box-container{
+.box-container{
     margin: 125px auto;
     width: 325px;
     height: 380px;
@@ -49,6 +52,7 @@ body{
     width: 50px;
     background-color: hsl(229, 57%, 11%);
     border-radius: 10px;
+    cursor: pointer;
 }
 .row-2 img{
     height: 25px;
@@ -85,11 +89,11 @@ span{
 .color-bar{
     width: 195px;
     height: 14px;
-    background: linear-gradient(90deg, hsl(7, 20%, 45%), hsl(335, 100%, 65%));
+    background: linear-gradient(90deg,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border-radius: 7px;
     margin: 3px;
 }
-div.bullet{
+.bullet{
     width: 11px;
     height: 11px;
     background-color: #fff;
@@ -97,8 +101,9 @@ div.bullet{
     position: absolute;
     top: 4.5px;
     left: 183.5px;
+    cursor: pointer;
 }
-#limit{
+.limit{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -125,14 +130,7 @@ div.bullet{
     color: hsl(229, 7%, 55%);
 }
 @media screen and (min-width: 750px){
-    body{
-        background: url('/images/bg-desktop.png') no-repeat;
-        /*background-attachment: fixed;*/
-        background-position: bottom;
-        background-size: 100% 420px;
-        background-color: hsl(229, 57%, 11%);
-    }
-    #box-container{
+    .box-container{
         flex-direction: row;
         margin: 290px auto;
         width: 80vw;
@@ -156,13 +154,19 @@ div.bullet{
     .color-bar{
         width: 72%;
     }
-    div.bullet{
+    .bullet{
         position: absolute;
         left: 68.5%;
     }
 }
-@media screen and (min-width: 1000px){
-    #box-container{
+@media screen and (min-width: 1025px){
+    html{
+        background: url('/images/bg-desktop.png') no-repeat;
+        background-position: bottom;
+        background-size: 100% 420px;
+        background-color: hsl(229, 57%, 11%);
+    }
+    .box-container{
         flex-direction: row;
         margin: 290px auto;
         width: 920px;
@@ -183,7 +187,7 @@ div.bullet{
     .color-bar{
         width: 345px;
     }
-    div.bullet{
+    .bullet{
         position: absolute;
         left: 72.5%;
     }
